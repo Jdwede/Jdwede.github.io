@@ -1,0 +1,1184 @@
+@font-face {
+  font-family: "Burbank";
+  src: url("/fonts/Burbank-Big-Condensed-Black.woff2") format("woff2"),
+       url("../fonts/Burbank-Big-Condensed-Black.woff") format("woff");
+}
+
+html,body {
+  font-family: Raleway;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+  position:absolute;
+  background: linear-gradient(340deg,#030072,#6c9ade);
+  /* OLD: (25deg,#16054A,#C8A6B4), NEW (345deg,#182b5a,#6c9ade) */
+}
+/* Changes text selection color*/
+::selection{
+    background: rgba(0, 0, 0, 0.3);
+}
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.3);
+}
+.container  {
+  width:100%;
+  height:100%;
+  position:absolute;
+}
+#blurCanvasTop{
+  left:0%;
+  top:0%;
+  position:absolute;
+}
+#blurCanvasBottom{
+  left:50%;
+  top:0;
+  position:absolute;
+}
+.content {
+  left:15%;
+  width:60%;
+  position:relative;
+}
+h1.title {
+  color:white;
+  font-size: 4vw;
+  display:inline;
+  font-weight:700;
+}
+p.desc{
+  position:relative;
+  width:100%;
+  font-size:3.15vw;
+  color:rgba(255,255,255,1);
+  font-weight: 300;
+}
+.contacts {
+  position:absolute;
+  right:0%;
+  bottom:0;
+  margin-bottom:1vw;
+  margin-right:1vw;
+}
+.contact li {
+  list-style-type:none;
+  float:left;
+  color: rgba(255,255,255,0.8);
+  font-weight:100;
+  font-size:17px;
+}
+.contact li a {
+  text-decoration:none;
+  color: rgba(255,255,255,0.8);
+}
+.contact li a:hover{
+  color:rgba(255,255,255,1);
+}
+.contact li~li {
+  margin-left:1vw; 
+}
+.blur {
+  width:100%;
+  height:100%;
+  position:absolute;
+  overflow:hidden;
+}
+.blurTop{
+  left:40%;
+  top:-110%;
+  transform:rotate(20deg);
+  transform-origin: 0 100%;
+}
+.blurBottom{
+  left:-60%;
+  top:100%;
+  transform:rotate(20deg);
+  transform-origin: 100% 0%;
+}
+
+
+.wrapper
+{
+	display:flex;
+	align-items:center;
+	flex-flow:wrap;
+	margin-top:220px;
+}
+
+/* Hovering gold battle pass star */
+.goldstar
+{
+	width: 10vw;
+	margin-left:auto;
+	margin-right:23vw;
+	margin-bottom:0vw;
+	-webkit-animation: mover 1.5s infinite  alternate;
+    animation: mover 1.5s infinite  alternate;
+}
+
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+
+/* Un-draggable and un-clickable images */
+img
+{
+	max-width:100%;
+	max-height:100%
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+a
+{
+    text-decoration:inherit;
+}
+
+/* Button to enter site on index.html page */
+.enterSiteButton
+{
+    left: 15vw;
+	width: 18vw;
+    margin-top: 0px;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    font-size: 1.6vw;
+    border: solid 2px #fff;
+    border-radius: 5px;
+    padding: 15px 15px;
+    -moz-transition-duration: 400ms;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms;
+}
+
+/* Hover effects on enter site button */
+.enterSiteButton:hover
+{
+    background-color: #fff;
+    color: #4276c9;
+}
+
+/**/
+/**/
+/* START OF MAIN MENU CHALLENGES PAGE ---------------------------------------------------------------------------- */
+/**/
+/**/
+
+/* Parent wrapper for challenge list with flexbox */
+.challengesWrapper
+{
+	display: flex;
+	margin-top: 5.555vh;
+    align-items: center;
+}
+
+
+/* Parent container for the initial list of challenges sorted by week number */
+.challengeListContainer 
+{
+    /* 100 vw = 100% of screen's width, same with height */
+    height: 75vh; /* 691px divided by 1080 height * 100 = 63.981vh */
+    width: 47vw; /* 880px divided by 1920 height * 100 = 45.833vw */
+    left: 5%;
+    position: relative;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+/* Scrollbar for parent div */
+
+/* Background of scrollbar */
+.challengeListContainer::-webkit-scrollbar-track {
+    padding: 2px 0;
+    background: linear-gradient(to right, 
+    transparent 0%, 
+    transparent calc(50% - 0.81px), 
+    rgba(105, 140, 193, 0.6) calc(50% - 0.8px), 
+    rgba(105, 140, 193, 0.6) calc(50% + 0.8px), 
+    transparent calc(50% + 0.81px), 
+    transparent 100%);
+}
+
+/* Dimensions of scrollbar */
+.challengeListContainer::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Scrollbar thumb */
+.challengeListContainer::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #d3ddee;
+    border: 1px solid rgba(58, 86, 126, 1);
+}
+
+
+/* Image for the horizontal "battle pass challenges" banner */
+.battlePassBar img
+{
+    max-width: 100%;
+    height: auto;
+    width: auto;
+}
+
+/* Border style for battle pass bar image */
+.battlePassBar
+{
+    width:110%;
+    outline: solid 4px rgba(75,107,155,0.5);
+    box-sizing: border-box;
+    border: solid 4px rgba(75,107,155,0.5);
+}
+
+.battlePassBar:hover
+{
+    cursor: default;
+    border: solid 4px rgb(255,255,255,0.6);
+}
+
+/* Horizontal container for each individual week */
+.battlePassWeeks
+{
+    display: flex;
+    outline: solid 4px rgba(75,107,155,0.5);
+    flex-direction: row;
+    align-items: center;
+    position:relative;
+    box-sizing: border-box;
+    border: solid 4px rgba(18, 35, 76, 0.5);
+    /* height = height of week 1 box (112px) divided by challengeListContainer height (691px) = 16.2% */
+    height: 14.84%;
+    width: 99.2%;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-left: 3px;
+    background: linear-gradient(to right, rgba(57, 79, 118, 0.8) , rgba(41, 61, 100, 0.8));
+    font-family: "Burbank";
+    font-size: 2vw;
+    color: #fff;
+}
+
+/* Effect when you hover overa week */
+.battlePassWeeks:hover
+{
+    cursor: pointer;
+    outline: solid 4px rgba(255,255,0,0.9);
+}
+
+/* Effect when you click on a week */
+.battlePassWeeks:active
+{
+    cursor: pointer;
+    outline: solid 4px white;
+}
+
+/* Contains "week" text */
+.weekText 
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(69, 93, 133, 0.9);
+    height: 100%;
+    width: 20%;
+    text-align: center;
+    color:#bfc7cf;
+    font-size:1.8vw;
+    padding-right:10px;
+    -webkit-clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+}
+
+/* Contains week number */
+.weekText b
+{
+    color:#fff;
+    font-size:3vw;
+}
+
+/* Div containing dimensions of progress bar background */
+#progressBar 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 1.85185vh;
+    width: 17.083vw;
+    background: rgba(94, 111, 142, 0.8);
+}
+
+/* 7 notches in between each progress bar, dimensions converted from pixel values (42x12) */
+#progressBarNotch 
+{
+    display: flex;
+    margin-top: 0.37037vh;
+    height: 1.11vh;
+    width: 2.1875vw;
+    background-color: #000a2a;
+}
+
+/* 5 notches in between each progress bar, dimensions converted from pixel values (42x12) */
+#progressBarNotch5 
+{
+    display: flex;
+    margin-top: 0.37037vh;
+    height: 1.11vh;
+    width: 3.177vw;
+    background-color: #000a2a;
+}
+
+/* Middle div containing challenge progress bar */
+#battlePassWeeksMiddleDiv
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    width: 75%;
+}
+
+/* Middle div styling on text to right of progress bar */
+#battlePassWeeksMiddleDiv span
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+    font-family: 'Noto Sans';
+    font-weight: 700;
+    font-size: 1.3vw;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Right div containing reward images */
+#battlePassWeeksRightDiv 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    background: rgba(29, 46, 82, 1);
+    box-sizing: border-box;
+    border-left: solid 4px rgba(63, 81, 116, 1);
+}
+
+/* Contains column of tier star and text */
+#tierstar
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width:20%;
+    margin-left:25px;
+    /*text-shadow: 0 0 0.8em #FF9A11;*/
+    -webkit-filter: drop-shadow(0em 0em 0.65em #FF9A11);
+    filter: drop-shadow(0em 0em 0.65em #FF9A11);
+}
+
+/* XP image div for image scaling */
+#xpimage 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 6.0185vh;
+    width: 3.38542vw;
+}
+
+/* drift image div for image scaling */
+#driftreward 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 9.537vh;
+    width: 3.38542vw;
+}
+
+/* Contains tier star text */
+#battlePassWeeksRightDiv span
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width:170%;
+    color: #fce179;
+    font-family: 'Noto Sans';
+    font-weight: 700;
+    font-size: 1.2vw;
+    margin-top: 10px;
+}
+
+#battlePassFooter
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    background: rgba(41, 61, 100, 0.8);
+    border: solid 4px rgba(18, 35, 76, 0.9);
+    height: 11.75925vh;
+    width: 46.4vw;
+    margin-top: 1%;
+    margin-left: 5%;
+    font-family: "Burbank";
+    color:#bfc7cf;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+#battlePassFooter span
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Noto Sans';
+    font-weight: 700;
+    font-size: 1.2vw;
+    margin-left: 2.865vw;
+    
+}
+
+#battlePassFooter:hover
+{
+    cursor: pointer;
+    outline: solid 4px rgb(255,255,0,0.9);
+}
+
+/* Horizontal container for the "unlocks in 7 days" overlay */
+.battlePassWeeksOverlay
+{
+    display: flex;
+    outline: solid 4px rgba(75,107,155,0.5);
+    flex-direction: row;
+    align-items: center;
+    position:relative;
+    box-sizing: border-box;
+    border: solid 4px rgba(18, 35, 76, 0.5);
+    /* height = height of week 1 box (112px) divided by challengeListContainer height (691px) = 16.2% */
+    height: 14.84%;
+    width: 99.2%;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-left: 3px;
+    background: linear-gradient(to right, rgba(57, 79, 118, 0.8) , rgba(41, 61, 100, 0.8));
+    font-family: "Burbank";
+    font-size: 2vw;
+    color: #fff;
+    opacity: 0.5;
+}
+
+/* Container to the right of the challenge list */
+#challengeListContainerRight 
+{
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 89vh;
+    width:40vw;
+    margin-top: 4%;
+    left: 56%;
+    /*
+    background: rgba(0,0,0,0.5);
+    */
+}
+
+/* Container holding the introduction text and images */
+#introduction 
+{
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    font-family: "Burbank";
+    text-align: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2.5vw;
+    color: #fff;
+    text-shadow: 0 0 0.3em #7a97f5;
+}
+
+/* Season 5 map container */
+#season5mapcontainer 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 69.444vh;
+    width: 39.0625vw;
+}
+
+
+/* Season 5 map image */
+#season5map 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.8;
+    width: 100%;
+}
+
+/* Magnifying glass on map */
+
+.glass {
+  width: 225px;
+  height: 225px;
+  position: absolute;
+  border-radius: 50%;
+  cursor: none;
+  
+  /* Multiple box shadows to achieve the glass effect */
+  box-shadow:
+    0 0 0 7px rgba(255, 255, 255, 0.85),
+    0 0 7px 7px rgba(0, 0, 0, 0.25), 
+    inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+  
+  /* hide the glass by default */
+  display: none;
+}
+
+/**/
+/**/
+/* START OF WEEK SPECIFIC PAGES ---------------------------------------------------------------------------------- */
+/**/
+/**/
+
+/* Container row for week description bar and arrows */
+.weekTopBarContainer 
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5.555vh;
+    margin-left: 2vw;
+    align-items: center;
+}
+
+/* Inner light gray left arrow */
+.backArrowInner 
+{
+    position: absolute;
+    display: flex;
+    margin-left: 0.5vw;
+    box-sizing: border-box;
+    height: 4.259vh;
+    width: 2.2916vw;
+    background-color: rgba(210, 222, 236, 1);
+    -webkit-clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+}
+
+/* Outer blue left arrow (stroke) */
+.backArrowOuter 
+{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    height: 5.555vh;
+    width: 3.0208vw;
+    background-color: rgba(86, 118, 161, 1);
+    -webkit-clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+}
+
+/* Inner light gray arrow */
+.forwardArrowInner 
+{
+    position: relative;
+    display: flex;
+    right: 2.8vw;
+    box-sizing: border-box;
+    height: 4.259vh;
+    width: 2.2916vw;
+    background-color: rgba(210, 222, 236, 1);
+    -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    -webkit-transition: opacity 0.2s;
+}
+
+/* Outer blue right arrow (stroke) */
+.forwardArrowOuter 
+{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    height: 5.555vh;
+    width: 3.0208vw;
+    background-color: rgba(86, 118, 161, 1);
+    -webkit-clip-path: polygon(100% 50%, 0 0, 0 100%);
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
+
+/* Hover effects on arrows switching between weeks */
+.backArrowInner:hover, .forwardArrowInner:hover
+{
+    opacity: 1;
+}
+
+/* Changes the arrows to yellow when the user clicks on it */
+.backArrowInner:active, .forwardArrowInner:active
+{
+    background: rgba(255, 255, 0, 0.9);
+}
+
+/* Div containing specific week description and reward */
+.weekDescriptionBar 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 19.259vh;
+    width: 48.483vw;
+    margin-left: 0.9375vw;
+    margin-right: 0.9375vw;
+    background: linear-gradient(to right, rgba(44, 69, 128, 0.8) , rgba(59, 95, 168, 0.8));
+    font-family: "Burbank";
+    font-size: 5vw;
+    color: #fff;
+    padding-left: 1.1vw;
+    padding-top: 1.1vw;
+    overflow: hidden;
+}
+
+/* Container div holding specific free challenges */
+.weeklyFreeChallengesContainer 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 23.89259vh;
+    width: 49.583vw;
+    margin-top: 1.48148vh;
+    margin-left: 5.96vw;
+}
+
+/* Container div holding specific weekly battle pass challenges */
+.weeklyPaidChallengesContainer 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 32.259vh;
+    width: 49.583vw;
+    margin-top: 1.48148vh;
+    margin-left: 5.96vw;
+}
+
+/* Image under specific week page indicating free challenges */
+#freePassBanner 
+{
+    /* Dimensions of picture: W: 116px, H: 244px */
+    position: relative;
+    display: flex;
+    flex: 0 1 auto;
+    /* Image: 116x244px */
+    height: 100%;
+    width: 6.041666vw;
+    background-size: 100% 100%;
+    background-image: url("../images/freepassbanner.png");
+}
+
+/* Image under specific week page indicating paid challenges */
+#paidPassBanner 
+{
+    position: relative;
+    display: flex;
+    flex: 0 1 auto;
+    /* Image: 116x324px */
+    height: 100%;
+    width: 6.041666vw;
+    background-size: 100% 100%;
+    background-image: url("../images/battlepassbanner.png");
+}
+
+/* Container div containing specific week challenge */
+#freeChallenge 
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 33.333333333%;
+    width: 43.541334vw;
+    background: rgb(47, 78, 149, 0.9);
+    box-sizing: border-box;
+    border-left: solid 0.2083vw rgba(33, 56, 108, 1);
+    border-right: solid 0.2083vw rgba(33, 56, 108, 1);
+    border-bottom: solid 0.2083vw rgba(33, 56, 108, 1);
+}
+
+/* Workaround for border problems - makes all challenge borders the same length */
+/* Selects the first challenge box and applies a top border */
+#freeChallenge:nth-child(2)
+{
+    border-top: solid 0.2083vw rgba(33, 56, 108, 1);
+}
+
+
+/* Hover effects on challenge divs - yellow outline indicating selection */
+#freeChallenge:hover
+{
+    z-index: 1;
+    outline: solid 0.2083vw rgba(255, 255, 0, 0.9);
+    cursor: pointer;
+}
+
+/* Same styling as above, copied to allow container to fit 4 challenges (heigh 25%) */
+
+/* Container div describing specific week challenge */
+#paidChallenge 
+{
+    position: relative;
+    display: flex;
+    height: 25%;
+    width: 43.541334vw;
+    background: rgb(47, 78, 149, 0.9);
+    box-sizing: border-box;
+    border-left: solid 0.2083vw rgba(33, 56, 108, 1);
+    border-right: solid 0.2083vw rgba(33, 56, 108, 1);
+    border-bottom: solid 0.2083vw rgba(33, 56, 108, 1);
+}
+
+/* Workaround for border problems - makes all challenge borders the same length */
+/* Selects the first challenge box and applies a top border */
+#paidChallenge:nth-child(2)
+{
+    border-top: solid 0.2083vw rgba(33, 56, 108, 1);
+}
+
+
+/* Hover effects on challenge divs - yellow outline indicating selection */
+#paidChallenge:hover
+{
+    z-index: 1;
+    outline: solid 0.2083vw rgba(255, 255, 0, 0.9);
+    cursor: pointer;
+}
+
+/* Left column on weekly challenges containing circle bullet point */
+.weekChallengeLeftColumn 
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 3.5vw;
+}
+
+/* Circle bullet point */
+.bulletPoint 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1.1111vh;
+    width: 0.615vw;
+    background-color: #5e76ac;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
+/* Middle column on weekly challenges containing text and progress bar */
+.weekChallengeMiddleColumn 
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    height: 100%;
+    width: 70%;
+    margin-left: 3.5vw;
+    font-family: "Noto Sans";
+    font-size: 1.09vw;
+    color: #b0c0d4;
+}
+
+/* Red color effect on "(HARD)" text */
+.weekChallengeMiddleColumn span
+{
+    color: #c16976;
+}
+
+/* Thin bar under each challenge description indicating progress towards completion */
+.thinProgressBar
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 0.55555vh;
+    width: 15.98958vw;
+    margin-top: 1.8vh;
+    background: rgba(43, 62, 105, 0.8);
+}
+
+/* Container for thin progress bar and numbers */
+.thinProgressBarContainer 
+{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 30%;
+}
+
+
+/* Number required to complete challenge */
+.progressNumbers 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5vh;
+    margin-left: 0.7vw;
+    color: #fff;
+    font-weight: 550;
+    letter-spacing: 0.05em;
+}
+
+
+/* Right column on weekly challenges containing challenge reward (number of tier stars) */
+.weekChallengeRightColumn 
+{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 15%;
+    margin-left: 36.65vw;
+    background: rgba(25, 45, 117, 0.3);
+}
+
+/* Styling and centering for tier star image in right column */
+.weekChallengeRightColumn img
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 45%;
+    width: auto;
+    /*text-shadow: 0 0 0.8em #FF9A11;*/
+    -webkit-filter: drop-shadow(0em 0em 1em #FF9A11);
+    filter: drop-shadow(0em 0em 1em #FF9A11);
+}
+
+/* Styling for gold numbers next to tier star in the right column */
+.weekChallengeRightColumn span
+{
+    font-family: 'Noto Sans';
+    font-weight: 700;
+    font-size: 1.3vw;
+    color: #fce179;
+    margin-left: 0.7vw;
+}
+
+/* Changes the color of text to red */
+#redText 
+{
+    display: inline-flex;
+    color: red;
+}
+
+/* Displays week title information ("WEEK 1 CHALLENGES)" */
+#weekTitle 
+{
+    display: flex;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    font-family: "Burbank";
+    font-weight: 700;
+    font-size: 3.2vw;
+    color: #fff;
+    text-shadow: 0 0 0.5em #7a97f5;
+    
+}
+
+/* Displays week description information ("Complete any 4 challenges to get reward item) */
+#weekDescription 
+{
+    display: flex;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    font-family: "Noto Sans";
+    font-size: 1.13vw;
+    font-style: italic;
+    color: #96a9d3;
+    margin-bottom: 0.2vw;
+}
+
+/* Container holding large progress bar and text */
+#largeProgressBarContainer 
+{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    height: 25%;
+    margin-top: 1.9vh;
+}
+
+/* Large progress bar located under week challenge title, indicates progress towards reward item */
+#largeProgressBar 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 2.26222vh;
+    width: 30.42666vw;
+    background: rgba(94, 111, 142, 0.8);
+}
+
+/* 7 Individual notches spaced evenly between the bar (7 challenges) */
+#largeProgressBarNotch 
+{
+    display: flex;
+    margin-top: 0.37037vh;
+    height: 1.48148vh;
+    width: 4.114583vw;
+    background-color: #000a2a;
+}
+
+/* 5 Individual notches spaced evenly between the bar (7 challenges) */
+#largeProgressBarNotch5
+{
+    display: flex;
+    margin-top: 0.37037vh;
+    height: 1.48148vh;
+    width: 5.83333vw;
+    background-color: #000a2a;
+}
+
+
+
+/* Number of challenges complete ("0 / 7" text) */
+.weekDescriptionBar span
+{
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sans';
+    font-weight: 700;
+    font-size: 1.5vw;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Right column of week description bar */
+#weekDescriptionBarRight 
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 13.5%;
+    margin-left: 41.6vw;
+    overflow: hidden;
+    border-left: solid 0.208333vw rgba(76, 108, 172, 1);
+}
+
+/* Styling for XP image in right column */
+#weekDescriptionBarRight img
+{
+    max-width: 60%;
+    max-height: auto;
+}
+
+/* Container for drift challenges */
+.driftChallengesContainer 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 46.66666vh;
+    width: 49.583vw;
+    margin-top: 1.48148vh;
+    margin-left: 5.96vw;
+}
+
+/* Same styling as paidChallenge, copied to allow container to fit 5 challenges (heigh 20%) */
+
+/* Container div describing specific week challenge */
+#driftChallenge 
+{
+    position: relative;
+    display: flex;
+    height: 20%;
+    width: 43.541334vw;
+    background: rgb(47, 78, 149, 0.9);
+    box-sizing: border-box;
+    border-left: solid 0.2083vw rgba(33, 56, 108, 1);
+    border-right: solid 0.2083vw rgba(33, 56, 108, 1);
+    border-bottom: solid 0.2083vw rgba(33, 56, 108, 1);
+}
+
+/* Workaround for border problems - makes all challenge borders the same length */
+/* Selects the first challenge box and applies a top border */
+#driftChallenge:nth-child(2)
+{
+    border-top: solid 0.2083vw rgba(33, 56, 108, 1);
+}
+
+
+/* Hover effects on challenge divs - yellow outline indicating selection */
+#driftChallenge:hover
+{
+    z-index: 1;
+    outline: solid 0.2083vw rgba(255, 255, 0, 0.9);
+    cursor: pointer;
+}
+
+
+/* Same as weekChallengeRightColumn, duplicated to apply new image styling to driftreward.png */
+.driftChallengeRightColumn 
+{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 15%;
+    margin-left: 36.65vw;
+    background: rgba(25, 45, 117, 0.3);
+    overflow: hidden;
+}
+
+.driftChallengeRightColumn img
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 105%;
+    overflow: hidden;
+}
+
+/* Image under specific week page indicating paid challenges */
+#driftPaidPassBanner 
+{
+    position: relative;
+    display: flex;
+    flex: 0 1 auto;
+    /* Image: 116x324px */
+    height: 100%;
+    width: 6.041666vw;
+    background-size: 100% 100%;
+    background-image: url("../images/battlepassbannerdrift.png");
+}
+
+/* Right column holding road trip week image */
+.roadTripChallengeRightColumn 
+{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 15%;
+    margin-left: 36.65vw;
+    background: rgba(25, 45, 117, 0.3);
+}
+
+/* Styling for the week image in the right column of road trip challenges */
+.roadTripChallengeRightColumn img
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: auto;
+}
+
+/* Battle pass banner image on left side of road trip challenges */
+#roadTripPaidPassBanner 
+{
+    position: relative;
+    display: flex;
+    flex: 0 1 auto;
+    /* Image: 116x324px */
+    height: 100%;
+    width: 6.041666vw;
+    background-size: 100% 100%;
+    background-image: url("../images/battlepassbannerroadtrip.png");
+}
+
+/* Container for drift challenges */
+.roadTripChallengesContainer 
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 65.185185vh;
+    width: 49.583vw;
+    margin-top: 1.48148vh;
+    margin-left: 5.96vw;
+}
+
+/* Same styling as paidChallenge, copied to allow container to fit 5 challenges (heigh 20%) */
+
+/* Container div describing specific week challenge */
+#roadTripChallenge 
+{
+    position: relative;
+    display: flex;
+    height: 14.2857143%;
+    width: 43.541334vw;
+    background: rgb(47, 78, 149, 0.9);
+    box-sizing: border-box;
+    border-left: solid 0.2083vw rgba(33, 56, 108, 1);
+    border-right: solid 0.2083vw rgba(33, 56, 108, 1);
+    border-bottom: solid 0.2083vw rgba(33, 56, 108, 1);
+}
+
+/* Workaround for border problems - makes all challenge borders the same length */
+/* Selects the first challenge box and applies a top border */
+#roadTripChallenge:nth-child(2)
+{
+    border-top: solid 0.2083vw rgba(33, 56, 108, 1);
+}
+
+
+/* Hover effects on challenge divs - yellow outline indicating selection */
+#roadTripChallenge:hover
+{
+    z-index: 1;
+    outline: solid 0.2083vw rgba(255, 255, 0, 0.9);
+    cursor: pointer;
+}

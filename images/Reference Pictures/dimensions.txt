@@ -1,0 +1,15 @@
+Season 5 Challenges Main Menu (top to bottom):
+
+Dimensions: (W)(H) in px
+
+* Dropdown Button: [72x72px]
+* Battle Pass/Weekly Challenges Bar: [880x64px]
+* Drift/Road Trip/Week Bar: [880x12px]
+* Progress Bar: [328x20px]
+* Progress Bar Notch (7): [42x12px]
+* Progress Bar Notch (5): [61x12px]
+* XP image: [65x65px]
+
+SPECIFIC WEEK CHALLENGE PAGE:
+* Free Pass Banner: [116x244px]
+* Battle Pass Banner: [116x324px]
