@@ -386,7 +386,7 @@ a
     justify-content: center;
     align-items: center;
     max-width:20%;
-    margin-left:25px;
+    margin-left:15px;
     /*text-shadow: 0 0 0.8em #FF9A11;*/
     -webkit-filter: drop-shadow(0em 0em 0.65em #FF9A11);
     filter: drop-shadow(0em 0em 0.65em #FF9A11);
@@ -1084,6 +1084,7 @@ a
     justify-content: center;
     align-items: center;
     max-width: 100%;
+    max-height: auto;
     height: 105%;
     overflow: hidden;
 }
