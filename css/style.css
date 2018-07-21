@@ -11,7 +11,6 @@ html,body {
   height:100%;
   position:absolute;
   background: linear-gradient(340deg,#030072,#6c9ade);
-  /* OLD: (25deg,#16054A,#C8A6B4), NEW (345deg,#182b5a,#6c9ade) */
 }
 /* Changes text selection color*/
 ::selection{
@@ -883,15 +882,19 @@ a
 }
 
 /* Styling and centering for tier star image in right column */
+/* TODO: scale with aspect ratio (possible solution - wrap in new div with vw, vh units defined to px dimensions, and style img to 100% width) */
 .weekChallengeRightColumn img
 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 1.8270833vw;
+    width: 1.9270833vw;
+    /*
     height: 45%;
     width: auto;
-    /*text-shadow: 0 0 0.8em #FF9A11;*/
+    */
     -webkit-filter: drop-shadow(0em 0em 1em #FF9A11);
     filter: drop-shadow(0em 0em 1em #FF9A11);
 }
