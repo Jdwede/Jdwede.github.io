@@ -235,15 +235,15 @@ a
 .battlePassBar
 {
     width:110%;
-    outline: solid 4px rgba(75,107,155,0.5);
+    outline: solid 0.2083vw rgba(75,107,155,0.5);
     box-sizing: border-box;
-    border: solid 4px rgba(75,107,155,0.5);
+    border: solid 0.2083vw rgba(75,107,155,0.5);
 }
 
 .battlePassBar:hover
 {
     cursor: default;
-    border: solid 4px rgb(255,255,255,0.6);
+    border: solid 0.2083vw rgb(255,255,255,0.6);
 }
 
 /* Horizontal container for each individual week */
@@ -255,7 +255,7 @@ a
     align-items: center;
     position:relative;
     box-sizing: border-box;
-    border: solid 4px rgba(18, 35, 76, 0.5);
+    border: solid 0.2083vw rgba(18, 35, 76, 0.5);
     /* height = height of week 1 box (112px) divided by challengeListContainer height (691px) = 16.2% */
     height: 14.84%;
     width: 99.2%;
@@ -359,8 +359,8 @@ a
     font-family: 'Noto Sans';
     font-weight: 700;
     font-size: 1.3vw;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 1.041666vw;
+    margin-right: 1.041666vw;
 }
 
 /* Right div containing reward images */
@@ -427,6 +427,7 @@ a
     margin-top: 10px;
 }
 
+/* Footer button (currently set for DONATE) */
 #battlePassFooter
 {
     display: flex;
@@ -435,7 +436,7 @@ a
     position: relative;
     box-sizing: border-box;
     background: rgba(41, 61, 100, 0.8);
-    border: solid 4px rgba(18, 35, 76, 0.9);
+    border: solid 0.2083vw rgba(18, 35, 76, 0.9);
     height: 11.75925vh;
     width: 46.4vw;
     margin-top: 1%;
@@ -462,19 +463,19 @@ a
 #battlePassFooter:hover
 {
     cursor: pointer;
-    outline: solid 4px rgb(255,255,0,0.9);
+    outline: solid 0.2083vw rgb(255,255,0,0.9);
 }
 
 /* Horizontal container for the "unlocks in 7 days" overlay */
 .battlePassWeeksOverlay
 {
     display: flex;
-    outline: solid 4px rgba(75,107,155,0.5);
+    outline: solid 0.2083vw rgba(75,107,155,0.5);
     flex-direction: row;
     align-items: center;
     position:relative;
     box-sizing: border-box;
-    border: solid 4px rgba(18, 35, 76, 0.5);
+    border: solid 0.2083vw rgba(18, 35, 76, 0.5);
     /* height = height of week 1 box (112px) divided by challengeListContainer height (691px) = 16.2% */
     height: 14.84%;
     width: 99.2%;
@@ -655,7 +656,7 @@ a
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 19.259vh;
+    height: 19.259vh; /* OLD: 19.259vh, switching to 10.159vw */
     width: 48.483vw;
     margin-left: 0.9375vw;
     margin-right: 0.9375vw;
@@ -675,8 +676,8 @@ a
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 23.89259vh;
-    width: 49.583vw;
+    height: 23.89259vh; /* OLD 23.89259vh switching to 12.65259vw */
+    width: 9.583vw;
     margin-top: 1.48148vh;
     margin-left: 5.96vw;
 }
@@ -688,7 +689,7 @@ a
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 32.259vh;
+    height: 32.259vh; /* OLD: 32.259vh, switching to 16.99vw */
     width: 49.583vw;
     margin-top: 1.48148vh;
     margin-left: 5.96vw;
@@ -803,7 +804,7 @@ a
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 1.1111vh;
+    height: 0.615vw; /* OLD: 1.1111vh, switching to vw */
     width: 0.615vw;
     background-color: #5e76ac;
     border-radius: 50%;
@@ -819,7 +820,7 @@ a
     position: absolute;
     justify-content: center;
     height: 100%;
-    width: 70%;
+    width: 78%;
     margin-left: 3.5vw;
     font-family: "Noto Sans";
     font-size: 1.09vw;
@@ -889,7 +890,7 @@ a
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: 1.8270833vw;
+    height: 1.7270833vw;
     width: 1.9270833vw;
     /*
     height: 45%;
@@ -985,6 +986,10 @@ a
     background-color: #000a2a;
 }
 
+/* (0 / 7) text to the right of the progress bar */
+#largeProgressBarNotchText {
+    
+}
 
 
 /* Number of challenges complete ("0 / 7" text) */
@@ -994,7 +999,7 @@ a
     justify-content: center;
     font-family: 'Noto Sans';
     font-weight: 700;
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -1027,7 +1032,7 @@ a
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 46.66666vh;
+    height: 46.66666vh; /* OLD: 46.66666vh, switching to 24.66666vw */
     width: 49.583vw;
     margin-top: 1.48148vh;
     margin-left: 5.96vw;
@@ -1142,14 +1147,14 @@ a
     background-image: url("../images/battlepassbannerroadtrip.png");
 }
 
-/* Container for drift challenges */
+/* Container for road trip challenges */
 .roadTripChallengesContainer 
 {
     position: relative;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 65.185185vh;
+    height: 65.185185vh; /* OLD: 65.185185vh, switching to 34.385185vw */
     width: 49.583vw;
     margin-top: 1.48148vh;
     margin-left: 5.96vw;
@@ -1185,4 +1190,355 @@ a
     z-index: 1;
     outline: solid 0.2083vw rgba(255, 255, 0, 0.9);
     cursor: pointer;
+}
+
+/* Media queries on specific week challenge page for smaller mobile devices */
+@media screen and (max-width:800px)
+{    
+    
+    /**/
+    /**/
+    /* START OF BATTLE PASS HOME PAGE */
+    /**/
+    /**/
+    
+    .challengeListContainer
+    {
+        width: 90%;
+    }
+    
+    .weekText
+    {
+        font-size: 3vw;
+    }
+    
+    .weekText b
+    {
+        font-size: 5vw;
+    }
+    
+    
+    /* Hide map and text for mobile */
+    #challengeListContainerRight
+    {
+        display: none;
+    }
+
+    #battlePassFooter
+    {
+        width: 90%;
+    }
+    
+    #battlePassWeeksMiddleDiv span
+    {
+        font-size: 2vw;
+    }
+    
+    #tierstar
+    {
+        max-width: 20%;
+    }
+    
+    #xpimage
+    {
+        height: 9.0185vh;
+        width: 5.38542vw;
+    }
+    
+    #driftreward
+    {
+        height: 9.537vh;
+        width: 5.38542vw;
+    }
+    
+    #tierstar span
+    {
+        font-size: 2vw;
+    }
+    
+    /**/
+    /**/
+    /* START OF WEEK SPECIFIC PAGES */
+    /**/
+    /**/
+    
+    /* Displays week title information ("WEEK 1 CHALLENGES)" */
+    #weekTitle 
+    {
+        font-size: 7vw;
+        color: #fff;
+        text-shadow: 0 0 0.5em #7a97f5;
+    }
+    
+    .weekDescriptionBar
+    {
+        width: 100%;
+    }
+    
+    #weekDescription
+    {
+        font-size: 2vw;
+    }
+    
+    #largeProgressBarNotchText {
+        font-size: 2vw;
+    }
+    
+    /* Moves the right column of the week description bar to align on the right side */
+    #weekDescriptionBarRight
+    {
+        margin-left: 75.6vw;
+    }
+    
+    /* Changes each free week challenge container to fit 100% width */
+    .weeklyFreeChallengesContainer
+    {
+        width: 100%;
+        align-content: flex-start;
+    }
+    
+    .roadTripChallengesContainer
+    {
+        width: 100%;
+        align-content: flex-start;
+    }
+    
+    .driftChallengesContainer
+    {
+        width: 100%;
+        align-content: flex-start;
+    }
+    
+    #freeChallenge
+    {
+        width: 78.4%;
+    }
+    
+    #paidChallenge
+    {
+        width: 78.4%;
+    }
+    
+    #roadTripChallenge
+    {
+        width: 78.4%;
+    }
+    
+    #driftChallenge
+    {
+        width: 78.4%;
+    }
+    
+    #freePassBanner
+    {
+        width: 10%;
+    }
+    
+    #paidPassBanner
+    {
+        width: 10%;
+    }
+    
+    #roadTripPaidPassBanner
+    {
+        width: 10%;
+    }
+    
+    #driftPaidPassBanner
+    {
+        width: 10%;
+    }
+    
+    .weekChallengeMiddleColumn
+    {
+        font-size: 2vw;
+    }
+    
+    .weekChallengeRightColumn 
+    {
+        margin-left: 66.6vw;
+    }
+    
+    .roadTripChallengeRightColumn
+    {
+        margin-left: 66.6vw;
+    }
+    
+    .driftChallengeRightColumn
+    {
+        margin-left: 66.6vw;
+    }
+    
+    /* Tier star image in right column of specific week challenge */
+    .weekChallengeRightColumn img
+    {
+        width: 30%;
+        height: auto;
+    }
+    
+    /* Number displayed next to tier star */
+    .weekChallengeRightColumn span
+    {
+        font-size: 2vw;
+    }
+    
+    .weeklyPaidChallengesContainer
+    {
+        width: 100%;
+        align-content: flex-start;
+    }
+    
+    .progressNumbers
+    {
+        font-size: 1.4vw;
+    }
+}
+
+/* Media queries on specific week challenge page for smartphones (re-sizing pictures and fonts only) */
+@media screen and (max-width:450px)
+{
+    /**/
+    /**/
+    /* START OF BATTLE PASS HOME PAGE */
+    /**/
+    /**/
+    
+    .challengeListContainer
+    {
+        width: 90%;
+    }
+    
+    .weekText
+    {
+        font-size: 5vw;
+    }
+    
+    .weekText b
+    {
+        font-size: 7vw;
+    }
+    
+    #battlePassFooter span
+    {
+        font-size: 2.5vw;
+    }
+    
+    #battlePassWeeksMiddleDiv span
+    {
+        font-size: 2.8vw;
+    }
+    
+    #tierstar
+    {
+        max-width: 30%;
+        margin-right: 1vw;
+    }
+    
+    #xpimage
+    {
+        height: 9.0185vh;
+        width: 6.38542vw;
+    }
+    
+    #driftreward
+    {
+        height: 9.537vh;
+        width: 6.38542vw;
+    }
+    
+    #tierstar span
+    {
+        font-size: 2vw;
+    }
+    
+    /**/
+    /**/
+    /* START OF WEEK SPECIFIC PAGES */
+    /**/
+    /**/
+    
+    /* Displays week title information ("WEEK 1 CHALLENGES)" */
+    #weekTitle 
+    {
+        font-size: 10vw;
+        color: #fff;
+        text-shadow: 0 0 0.5em #7a97f5;
+        z-index: 1;
+    }
+    
+    /* Description text under top week challenge bar */
+    #weekDescription
+    {
+        font-size: 3vw;
+    }
+    
+    #largeProgressBar
+    {
+        width: 50vw;
+        height: 2.16222vh;
+    }
+    
+    #largeProgressBarNotch
+    {
+        width: 6.6vw;
+        height:
+    }
+    
+    #largeProgressBarNotch5
+    {
+        width: 9.45vw;
+    }
+    
+    #largeProgressBarNotchText {
+        font-size: 3vw;
+    }
+    
+    /* Tier star image in right column of specific week challenge */
+    .weekChallengeRightColumn img
+    {
+        width: 45%;
+        height: auto;
+    }
+    
+    /* Number displayed next to tier star */
+    .weekChallengeRightColumn span
+    {
+        font-size: 2.5vw;
+    }
+    
+    .weekChallengeMiddleColumn
+    {
+        font-size: 2.86vw;
+    }
+    
+    #freePassBanner
+    {
+        width: 12%;
+    }
+    
+    #paidPassBanner
+    {
+        width: 12%;
+    }
+    
+    #freeChallenge
+    {
+        width: 76.3%
+    }
+    
+    #paidChallenge
+    {
+        width: 76.3%;
+    }
+    
+    .weekChallengeRightColumn 
+    {
+        margin-left: 64.6vw;
+    }
+    
+    .progressNumbers
+    {
+        margin-left: 2vw;
+        font-size: 2.5vw;
+    }
 }
