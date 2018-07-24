@@ -243,7 +243,7 @@ a
 .battlePassBar:hover
 {
     cursor: default;
-    border: solid 0.2083vw rgb(255,255,255,0.6);
+    border: solid 0.2083vw rgba(255,255,255,0.6);
 }
 
 /* Horizontal container for each individual week */
@@ -463,7 +463,7 @@ a
 #battlePassFooter:hover
 {
     cursor: pointer;
-    outline: solid 0.2083vw rgb(255,255,0,0.9);
+    outline: solid 0.2083vw rgba(255,255,0,0.9);
 }
 
 /* Horizontal container for the "unlocks in 7 days" overlay */
@@ -731,7 +731,7 @@ a
     flex-direction: column;
     height: 33.333333333%;
     width: 43.541334vw;
-    background: rgb(47, 78, 149, 0.9);
+    background: rgba(47, 78, 149, 0.9);
     box-sizing: border-box;
     border-left: solid 0.2083vw rgba(33, 56, 108, 1);
     border-right: solid 0.2083vw rgba(33, 56, 108, 1);
@@ -763,7 +763,7 @@ a
     display: flex;
     height: 25%;
     width: 43.541334vw;
-    background: rgb(47, 78, 149, 0.9);
+    background: rgba(47, 78, 149, 0.9);
     box-sizing: border-box;
     border-left: solid 0.2083vw rgba(33, 56, 108, 1);
     border-right: solid 0.2083vw rgba(33, 56, 108, 1);
@@ -1047,7 +1047,7 @@ a
     display: flex;
     height: 20%;
     width: 43.541334vw;
-    background: rgb(47, 78, 149, 0.9);
+    background: rgba(47, 78, 149, 0.9);
     box-sizing: border-box;
     border-left: solid 0.2083vw rgba(33, 56, 108, 1);
     border-right: solid 0.2083vw rgba(33, 56, 108, 1);
@@ -1169,7 +1169,7 @@ a
     display: flex;
     height: 14.2857143%;
     width: 43.541334vw;
-    background: rgb(47, 78, 149, 0.9);
+    background: rgba(47, 78, 149, 0.9);
     box-sizing: border-box;
     border-left: solid 0.2083vw rgba(33, 56, 108, 1);
     border-right: solid 0.2083vw rgba(33, 56, 108, 1);
@@ -1312,25 +1312,21 @@ a
     #freeChallenge
     {
         width: 78.4%;
-        opacity: 1;
     }
     
     #paidChallenge
     {
         width: 78.4%;
-        opacity: 1;
     }
     
     #roadTripChallenge
     {
         width: 78.4%;
-        opacity: 1;
     }
     
     #driftChallenge
     {
         width: 78.4%;
-        opacity: 1;
     }
     
     #freePassBanner
@@ -1356,7 +1352,6 @@ a
     .weekChallengeMiddleColumn
     {
         font-size: 2vw;
-        opacity: 1;
     }
     
     .weekChallengeRightColumn 
@@ -1515,7 +1510,6 @@ a
     .weekChallengeMiddleColumn
     {
         font-size: 2.86vw;
-        opacity: 1;
     }
     
     #freePassBanner
@@ -1531,13 +1525,11 @@ a
     #freeChallenge
     {
         width: 76.3%;
-        opacity: 1;
     }
     
     #paidChallenge
     {
         width: 76.3%;
-        opacity: 1;
     }
     
     .weekChallengeRightColumn 
