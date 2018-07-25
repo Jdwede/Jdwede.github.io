@@ -194,6 +194,7 @@ a
     box-sizing: border-box;
     overflow: scroll;
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Scrollbar for parent div */
