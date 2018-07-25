@@ -1393,6 +1393,12 @@ a
     {
         font-size: 1.4vw;
     }
+    
+    #battlePassFooter span
+    {
+        font-size: 2.2vw;
+        margin-left: 7vw;
+    }
 }
 
 /* Media queries on specific week challenge page for smartphones (re-sizing pictures and fonts only) */
