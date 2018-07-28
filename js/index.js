@@ -116,7 +116,11 @@ $("body").on("contextmenu", "img", function(e) {
   return false;
 });
 
+//
+//
 // magnifying glass function
+//
+//
 $(function() {
 
   var native_width = 0;
@@ -277,3 +281,79 @@ $(function() {
   });
 
 });
+
+// Responsive Modal Test, working with modaltest.html
+
+/*
+// Get modal elements
+var modal = document.getElementById('simpleModal');
+
+// Get open modal button
+var modalBtn = document.getElementById('modalBtn');
+
+// Get close button
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
+
+// Listen for open click
+modalBtn.addEventListener('click', openModal);
+
+// Listen for close click
+closeBtn.addEventListener('click', closeModal);
+
+// Listen for outside click
+window.addEventListener('click', outsideClick);
+
+// Function to open modal
+function openModal()
+{
+    modal.style.display = 'block';
+}
+
+// Function to close modal
+function closeModal()
+{
+    modal.style.display = 'none';
+}
+
+// Function to close modal if outside click
+function outsideClick(e)
+{
+    if(e.target == modal)
+    {
+        modal.style.display = 'none';
+    }
+}
+*/
+
+
+// Responsive modal test with week specific challenges
+
+// Function to add event listeners to every button with a loop instead of doing it manually
+window.addEventListener('DOMContentLoaded', run)
+function run()
+{
+    // Get entire modal including window and contents
+    var modal = document.getElementsByClassName('modal');
+    var freeChallenge = document.getElementsByClassName('freeChallengeModal');
+    
+    // Initialize all event listeners
+    for(var i = 0; i < freeChallenge.length; i++)
+    {
+        freeChallenge[i].addEventListener('click', openModal);
+    }
+    
+    //function openModal()
+    //{
+    //    for(var j = 0; j < modal.length; j++)
+    //    {
+    //        modal[j].style.display ='block';
+    //    }
+    //}
+    
+    // Function to open modal
+    function openModal()
+    {
+        // TODO make this work with modal[i] and sync with freechallenge[i]
+        modal[0].style.display = 'block';
+    }
+}

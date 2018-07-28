@@ -20,8 +20,7 @@
 	<canvas class="container" id="container" role="main"></canvas>
 	<div class="blur blurTop"><canvas class="canvas"id="blurCanvasTop"></canvas></div>
 	<div class="blur blurBottom"><canvas width="1000px" height="1000px" class="canvas" id="blurCanvasBottom"></canvas></div>
-	<script src="js/index.js"></script>
-
+    
     <div class="weekTopBarContainer">
         <a class="backArrowOuter" href="roadtrip.html"><a class="backArrowInner" href="roadtrip.html"></a></a>
         
@@ -52,7 +51,7 @@
     <div class="weeklyFreeChallengesContainer">
         <div id="freePassBanner"></div>
         
-        <a id="freeChallenge">
+        <a id="freeChallenge" class="freeChallengeModal">
             <div class="weekChallengeLeftColumn"><div class="bulletPoint"></div></div>
             <div class="weekChallengeMiddleColumn">
                 Deal damage with SMGs to opponents
@@ -64,7 +63,7 @@
             <div class="weekChallengeRightColumn"><img src="images/tierstar.png"><span>5</span></img></div>
         </a>
         
-        <a id="freeChallenge">
+        <a id="freeChallenge" class="freeChallengeModal">
             <div class="weekChallengeLeftColumn"><div class="bulletPoint"></div></div>
             <div class="weekChallengeMiddleColumn">
                 Search a Supply Llama
@@ -76,7 +75,7 @@
             <div class="weekChallengeRightColumn"><img src="images/tierstar.png"><span>5</span></img></div>
         </a>
     
-        <a id="freeChallenge">
+        <a id="freeChallenge" class="freeChallengeModal">
             <div class="weekChallengeLeftColumn"><div class="bulletPoint"></div></div>
             <div class="weekChallengeMiddleColumn">
                 <div>Clinger, Stink Bomb, or Grenade Eliminations <span>(HARD)</span></div>
@@ -143,5 +142,31 @@
         
     </div>
     
+
+    <!-- Hidden modal content -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <p>Week 1 Challenge 1 Test!</p>
+        </div>
+    </div>
+
+    <!-- Test for multiple weeks modal content -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <p>Week 1 Challenge 2 Test!</p>
+        </div>
+    </div>
+
+    <!-- Test for multiple weeks modal content -->
+    <div class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <p>Week 1 Challenge 3 Test!</p>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
 </body>
 </html>

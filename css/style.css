@@ -3,7 +3,6 @@
   src: url("/fonts/Burbank-Big-Condensed-Black.woff2") format("woff2"),
        url("../fonts/Burbank-Big-Condensed-Black.woff") format("woff");
 }
-
 html,body {
   font-family: Raleway;
   overflow:hidden;
@@ -23,16 +22,19 @@ html,body {
   width:100%;
   height:100%;
   position:absolute;
+  pointer-events: none;
 }
 #blurCanvasTop{
   left:0%;
   top:0%;
   position:absolute;
+  pointer-events: none;
 }
 #blurCanvasBottom{
   left:50%;
   top:0;
   position:absolute;
+  pointer-events: none;
 }
 .content {
   left:15%;
@@ -1550,4 +1552,55 @@ a
         margin-left: 2vw;
         font-size: 2.5vw;
     }
+}
+
+/* Responsive Modal Test */
+.button
+{
+    z-index: 1;
+    padding: 1em 2em;
+}
+
+.modal
+{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content
+{
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    animation-name: modalopen;
+    animation-duration: 400ms;
+}
+
+.closeBtn
+{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+}
+
+.closeBtn:hover, closeBtn:focus
+{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen
+{
+    from {opacity: 0}
+    to {opacity: 1}
 }
