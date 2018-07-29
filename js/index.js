@@ -330,7 +330,6 @@ function outsideClick(e)
 
 window.addEventListener("DOMContentLoaded", run);
 function run() {
-  // Get entire modal including window and contents
     // Get entire modal including window and contents
     var freeChallenges = document.getElementsByClassName("freeChallengeModal");
     var paidChallenges = document.getElementsByClassName("paidChallengeModal");
@@ -404,6 +403,7 @@ function run() {
     */
     
     // WORK IN PROGRESS
+    /*
     window.addEventListener('click', outsideClick);
     var freeModal = document.getElementsByClassName("freeModal");
     Object.keys(freeModal).forEach(index => {
@@ -415,5 +415,6 @@ function run() {
     var freeModal = document.getElementsByClassName("freeModal");
     freeModal[index].style.display = "none";
     };
+    */
     
 }
