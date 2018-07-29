@@ -319,35 +319,101 @@ function outsideClick(e)
 }
 */
 
-// Responsive modal test with week specific challenges
-
-// Function to add event listeners to every button with a loop instead of doing it manually
-window.addEventListener("DOMContentLoaded", run);
-function run() {
-  // Get entire modal including window and contents
-  var freeChallenges = document.getElementsByClassName("freeChallengeModal");
-  Object.keys(freeChallenges).forEach(index => {
-    freeChallenges[index].addEventListener("click", () => openModal(index));
-  });
   // Initialize all event listeners
   // for (var i = 0; i < freeChallenge.length; i++) {
   //   freeChallenge[i].addEventListener("click", event => openModal(event, i));
   // }
 
-  //function openModal()
-  //{
-  //    for(var j = 0; j < modal.length; j++)
-  //    {
-  //        modal[j].style.display ='block';
-  //    }
-  //}
+// Responsive modal test with week specific challenges
 
-  // Function to open modal
-  openModal = index => {
-    // TODO make this work with modal[i] and sync with freechallenge[i]
-    var modal = document.getElementsByClassName("modal");
-    modal[index].style.display = "block";
-    let text = modal[index].childNodes[1].childNodes[3];
-    text.textContent = freeChallenges[index].childNodes[3].textContent;
-  };
+// Function to add event listeners to every button with a loop instead of doing it manually
+
+window.addEventListener("DOMContentLoaded", run);
+function run() {
+  // Get entire modal including window and contents
+    // Get entire modal including window and contents
+    var freeChallenges = document.getElementsByClassName("freeChallengeModal");
+    var paidChallenges = document.getElementsByClassName("paidChallengeModal");
+    var closeBtn = document.getElementsByClassName("closeBtn");
+    var paidCloseBtn = document.getElementsByClassName("paidCloseBtn");
+
+    // Listen for open click on specific free challenge button
+    Object.keys(freeChallenges).forEach(index => {
+    freeChallenges[index].addEventListener("click", () => openFreeModal(index));
+    });
+
+    // Listen for open click on specific paid challenge button    
+    Object.keys(paidChallenges).forEach(index => {
+    paidChallenges[index].addEventListener("click", () => openPaidModal(index));
+    });
+    
+    // Listen for close click on button
+    Object.keys(closeBtn).forEach(index => {
+    closeBtn[index].addEventListener("click", () => closeModal(index));
+    });
+    
+    // Listen for close click on paid button
+    Object.keys(paidCloseBtn).forEach(index => {
+    paidCloseBtn[index].addEventListener("click", () => paidCloseModal(index));
+    });
+
+    // Function to open free modal
+    openFreeModal = index => {
+    var freeModal = document.getElementsByClassName("freeModal");
+    freeModal[index].style.display = "block";
+    // Displays text in content of existing button
+    //let text = modal[index].childNodes[1].childNodes[3];
+    //text.textContent = freeChallenges[index].childNodes[3].textContent;
+    };
+
+    // Function to open paid modal
+    openPaidModal = index => {
+    var paidModal = document.getElementsByClassName("paidModal");
+    paidModal[index].style.display = "block";
+    // Displays text in content of existing button
+    //let text = modal[index].childNodes[1].childNodes[3];
+    //text.textContent = freeChallenges[index].childNodes[3].textContent;
+    };
+    
+    // Function to close free modal
+    closeModal = index => {
+    var freeModal = document.getElementsByClassName("freeModal");
+    freeModal[index].style.display = "none";
+    //var paidModal = document.getElementsByClassName("paidModal");
+    //paidModal[index].style.display = "none";
+    };
+    
+    // Function to close paid modal
+    paidCloseModal = index => {
+    var paidModal = document.getElementsByClassName("paidModal");
+    paidModal[index].style.display = "none";
+    };
+    
+    /*
+    // Only working for week 1 challenge 1 right now
+    window.addEventListener('click', outsideClick);
+    var modal = document.getElementById("simpleModal");
+    function outsideClick(e)
+    {  
+        if(e.target == modal)
+        {
+            console.log("Outside click");
+            modal.style.display = "none";
+        }
+    }
+    */
+    
+    // WORK IN PROGRESS
+    window.addEventListener('click', outsideClick);
+    var freeModal = document.getElementsByClassName("freeModal");
+    Object.keys(freeModal).forEach(index => {
+    window.addEventListener("click", () => freeModalOutsideClick(index));
+    });
+    
+    freeModalOutsideClick = index => {
+    console.log("outside click");
+    var freeModal = document.getElementsByClassName("freeModal");
+    freeModal[index].style.display = "none";
+    };
+    
 }

@@ -1554,14 +1554,14 @@ a
     }
 }
 
-/* Responsive Modal Test */
-.button
-{
-    z-index: 1;
-    padding: 1em 2em;
-}
+/**/
+/**/
+/* Responsive Modal Styles */
+/**/
+/**/
 
-.modal
+/* Modal that opens upon button click */
+.freeModal, .paidModal
 {
     display: none;
     position: fixed;
@@ -1574,8 +1574,12 @@ a
     background: rgba(0, 0, 0, 0.5);
 }
 
+/* Content within modal (text and images div) */
 .modal-content
 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
     background-color: #f4f4f4;
     margin: 20% auto;
     padding: 20px;
@@ -1585,20 +1589,24 @@ a
     animation-duration: 400ms;
 }
 
-.closeBtn
+/* "X" button in top right on modal content */
+.closeBtn, .paidCloseBtn
 {
     color: #ccc;
     float: right;
-    font-size: 30px;
+    margin-left: auto;
+    font-size: 80px;
 }
 
-.closeBtn:hover, closeBtn:focus
+/* Hover effects on "X" button */
+.closeBtn:hover, closeBtn:focus, .paidCloseBtn:hover, paidCloseBtn:focus
 {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
+/* Fade in effect when open modal button is clicked */
 @keyframes modalopen
 {
     from {opacity: 0}
