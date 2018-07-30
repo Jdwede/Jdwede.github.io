@@ -1594,9 +1594,16 @@ a
 /* "X" button in top right on modal content */
 .closeBtn, .paidCloseBtn
 {
-    display: absolute;
+    display: block;
+    height: 10px;
+    width: 10px;
+    top: -70px;
+    left: 10px;
+    position: relative;
     margin-left: auto;
     font-size: 100px;
+    /*margin: -2% auto;
+    left: 88%;*/
     vertical-align: top;
     color: #ccc;
     float: right;
