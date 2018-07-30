@@ -11,7 +11,7 @@ var ww = $(window).width();
 var wh = $(window).height();
 canvas.width = ww;
 canvas.height = wh;
-var partCount = 100;
+var partCount = 80;
 var particles = [];
 
 function particle() {
@@ -24,7 +24,7 @@ function particle() {
   };
   this.vx = 0.3 * Math.random();
   this.vy = 0.3 * Math.random();
-  this.radius = randomInt(2, 3);
+  this.radius = randomInt(2, 2.5);
   this.float = function() {
     this.x += this.vx * this.direction.x;
     this.y += this.vy * this.direction.y;
