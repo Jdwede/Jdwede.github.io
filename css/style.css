@@ -1573,6 +1573,16 @@ a
     background: rgba(0, 0, 0, 0.5);
 }
 
+/* Styling for header of modal*/
+.modal-header
+{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    padding: 20px;
+    background: linear-gradient(340deg, #fff , #000);
+}
+
 /* Content within modal (text and images div) */
 .modal-content
 {
@@ -1584,8 +1594,8 @@ a
     color: #fff;
     background: linear-gradient(340deg,rgba(3, 0, 114, 0.9),rgba(108, 154, 222, 0.9));
     margin: 10% auto;
-    padding: 20px;
     width: 80%;
+    height: 50%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
     animation-duration: 400ms;
