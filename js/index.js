@@ -288,9 +288,6 @@ function run() {
     var paidChallenges = document.getElementsByClassName("paidChallengeModal");
     var closeBtn = document.getElementsByClassName("closeBtn");
     var paidCloseBtn = document.getElementsByClassName("paidCloseBtn");
-    var freeModalWindow = document.getElementsByClassName("freeModal");
-    var paidModalWindow = document.getElementsByClassName("paidModal");
-
 
     //
     /* LISTENERS */
@@ -306,7 +303,7 @@ function run() {
     paidChallenges[index].addEventListener("click", () => openPaidModal(index));
     });
     
-    // Listen for close click on button
+    // Listen for close click on free button
     Object.keys(closeBtn).forEach(index => {
     closeBtn[index].addEventListener("click", () => freeCloseModal(index));
     });
@@ -314,16 +311,6 @@ function run() {
     // Listen for close click on paid button
     Object.keys(paidCloseBtn).forEach(index => {
     paidCloseBtn[index].addEventListener("click", () => paidCloseModal(index));
-    });
-    
-    // Listen for close click on free modal window
-    Object.keys(freeModalWindow).forEach(index => {
-    freeModalWindow[index].addEventListener("click", () => freeCloseModal(index));
-    });
-    
-    // Listen for close click on paid modal window
-    Object.keys(paidModalWindow).forEach(index => {
-    paidModalWindow[index].addEventListener("click", () => paidCloseModal(index));
     });
     
     //
@@ -334,26 +321,18 @@ function run() {
     openFreeModal = index => {
     var freeModal = document.getElementsByClassName("freeModal");
     freeModal[index].style.display = "block";
-    // Displays text in content of existing button
-    //let text = modal[index].childNodes[1].childNodes[3];
-    //text.textContent = freeChallenges[index].childNodes[3].textContent;
     };
 
     // Function to open paid modal
     openPaidModal = index => {
     var paidModal = document.getElementsByClassName("paidModal");
     paidModal[index].style.display = "block";
-    // Displays text in content of existing button
-    //let text = modal[index].childNodes[1].childNodes[3];
-    //text.textContent = freeChallenges[index].childNodes[3].textContent;
     };
     
     // Function to close free modal
     freeCloseModal = index => {
     var freeModal = document.getElementsByClassName("freeModal");
     freeModal[index].style.display = "none";
-    //var paidModal = document.getElementsByClassName("paidModal");
-    //paidModal[index].style.display = "none";
     };
     
     // Function to close paid modal
@@ -362,4 +341,15 @@ function run() {
     paidModal[index].style.display = "none";
     };
     
+    
+    var modal = document.getElementsById("simpleModal");
+    window.addEventListener("click", outsideClick);
+    function outsideClick(e)
+    {
+        if(e.target == modal)
+        {
+            modal.style.display = 'none';
+        }
+    }
+
 }
