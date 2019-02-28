@@ -9,7 +9,7 @@ html,body {
   width:100%;
   height:100%;
   position:absolute;
-  background: linear-gradient(340deg,#030072,#6c9ade);
+  background: linear-gradient(340deg,#2b1c23,#566680);
 }
 /* Changes text selection color*/
 ::selection{
@@ -109,9 +109,10 @@ p.desc{
 /* Hovering gold battle pass star */
 .goldstar
 {
+	position: relative;
 	width: 10vw;
 	margin-left:auto;
-	margin-right:23vw;
+	margin-right:27vw;
 	margin-bottom:0vw;
 	-webkit-animation: mover 1.5s infinite  alternate;
     animation: mover 1.5s infinite  alternate;
@@ -156,7 +157,8 @@ a
     text-align: center;
     font-size: 1.6vw;
     border: solid 2px #fff;
-    border-radius: 5px;
+	/* Curved rectangle corners */
+    /*border-radius: 5px;*/
     padding: 15px 15px;
     -moz-transition-duration: 400ms;
     -webkit-transition-duration: 400ms;
@@ -515,13 +517,14 @@ a
     display: flex;
     flex-shrink: 0;
     justify-content: center;
-    font-family: "Burbank";
+    font-family: "Raleway";
     text-align: center;
     align-items: center;
     font-weight: 700;
     font-size: 2.5vw;
     color: #fff;
-    text-shadow: 0 0 0.3em #7a97f5;
+	/* Background Glow */
+    /*text-shadow: 0 0 0.3em #7a97f5;*/
 }
 
 /* Season 5 map container */
