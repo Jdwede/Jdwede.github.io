@@ -9,7 +9,7 @@ html,body {
   width:100%;
   height:100%;
   position:absolute;
-  background: linear-gradient(340deg,#2b1c23,#566680);
+  background: linear-gradient(340deg,rgba(43, 28, 35, 0.6), rgba(86, 102, 128, 0.6));
 }
 /* Changes text selection color*/
 ::selection{
@@ -1645,4 +1645,41 @@ a
         opacity: 1;
         width: 80%;
     }
+}
+
+/* WebGL styling */
+.p-canvas-webgl {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.p-summary {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  color: #fff;
+  font-family: 'Homenaje', sans-serif;
+  text-align: center;
+}
+.p-summary h1 {
+  margin: 0 0 0.1em;
+  font-size: 18vh;
+  font-weight: 400;
+}
+.p-summary p {
+  margin: 0;
+  font-size: 3vh;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.p-summary a {
+  color: #fff;
 }
