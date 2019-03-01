@@ -125,11 +125,11 @@ p.desc{
 
 @-webkit-keyframes mover {
     0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
+    100% { transform: translateY(-10px); }
 }
 @keyframes mover {
     0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
+    100% { transform: translateY(-10px); }
 }
 
 
@@ -384,7 +384,7 @@ a
     width: 30%;
     background: rgba(8, 10, 13, 0.25);
     box-sizing: border-box;
-    border-left: solid 4px rgba(8, 10, 13, 0.3);
+    border-left: solid 4px rgba(8, 10, 13, 0.4);
 }
 
 /* Contains column of tier star and text */
